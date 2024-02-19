@@ -156,7 +156,7 @@ export default function Page() {
         </div>
         <div className="bg-gray-50">
           <div className="w-full relative">
-            <img src="/contributor.jpg" alt="contributor" />
+            <img src="/seacrowd-catalogue/contributor.jpg" alt="contributor" />
           </div>
         </div>
       </section>
