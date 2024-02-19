@@ -16,6 +16,7 @@ import { Github, Database } from "lucide-react";
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface RouteProps {
   href: string;
@@ -24,11 +25,11 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "/seacrowd-catalogue",
+    href: "/",
     label: "Data Catalogue",
   },
   {
-    href: "/seacrowd-catalogue/contributors",
+    href: "/contributors",
     label: "Contributors",
   },
 ];
@@ -38,17 +39,14 @@ export const Navbar = () => {
 
   const renderLogo = () => {
     return (
-      <a
-        href="/seacrowd-catalogue"
-        className="ml-2 font-bold text-xl flex items-center"
-      >
+      <Link href="/" className="ml-2 font-bold text-xl flex items-center">
         <Image
           src={"/seacrowd-catalogue/logo.png"}
           alt="logo"
           width={186}
           height={32}
         />
-      </a>
+      </Link>
     );
   };
 
@@ -56,7 +54,7 @@ export const Navbar = () => {
     return (
       <>
         {routeList.map((route: RouteProps, i) => (
-          <a
+          <Link
             href={route.href}
             key={i}
             className={`text-[17px] ${buttonVariants({
@@ -64,7 +62,7 @@ export const Navbar = () => {
             })}`}
           >
             {route.label}
-          </a>
+          </Link>
         ))}
         <a
           href="https://github.com/SEACrowd/seacrowd-catalogue"
