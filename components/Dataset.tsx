@@ -1,13 +1,5 @@
 import { Search } from "./ui/search";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "./ui/pagination";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { LoadingSpinner } from "./ui/spinner";
 import { Button } from "./ui/button";
 import { Eye, FileType, Filter, Speech, Video } from "lucide-react";
@@ -27,6 +19,10 @@ export const Dataset = () => {
   const { data, loading } = useDatasetFetch();
   const [filteredData, setFilteredData] = useState<DatasetProps[]>([]);
   const [page, setPage] = useState(1);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const pageRef = useRef(0);
+  const pageCountRef = useRef(0);
 
   const filterData = (data: DatasetProps[]) => {
     let result = data.filter(
@@ -48,9 +44,8 @@ export const Dataset = () => {
   };
 
   const filterPage = () => {
-    const start = (page - 1) * PER_PAGE;
-    const end = start + PER_PAGE;
-
+    const start = 0; // Start from the first item
+    const end = page * PER_PAGE; // Load up to the current page * PER_PAGE
     // Also filter by search
     return filterData(data).slice(start, end);
   };
@@ -61,56 +56,38 @@ export const Dataset = () => {
     setPage(1); // Reset to the first page when search changes
   }, [search, data, filterModality, filterTask]);
 
-  const renderPagination = () => {
-    const totalPage = Math.ceil(filteredData.length / PER_PAGE);
-    const pageNumbers = [];
-    const visiblePages = 4;
-    const halfVisible = Math.floor(visiblePages / 2);
-
-    let startPage = Math.max(page - halfVisible, 1);
-    let endPage = Math.min(startPage + visiblePages - 1, totalPage);
-
-    if (endPage - startPage + 1 < visiblePages) {
-      startPage = Math.max(endPage - visiblePages + 1, 1);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          const totalPage = pageCountRef.current / PER_PAGE;
+          if (totalPage > pageRef.current) {
+            setPage((v) => v + 1);
+          }
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0,
+      }
+    );
+    if (scrollRef.current) {
+      observer.observe(scrollRef.current);
     }
+  }, []);
 
-    for (let p = startPage; p <= endPage; p++) {
-      pageNumbers.push(
-        <PaginationItem key={p} role="button">
-          <PaginationLink
-            isActive={p === page}
-            onClick={() => setPage(p)}
-            href="#dataset"
-          >
-            {p}
-          </PaginationLink>
-        </PaginationItem>
-      );
-    }
-
-    return [
-      <PaginationPrevious
-        role="button"
-        key="prev"
-        href="#dataset"
-        onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
-      />,
-      ...pageNumbers,
-      <PaginationNext
-        role="button"
-        key="next"
-        href="#dataset"
-        onClick={() => setPage((prev) => Math.min(prev + 1, totalPage))}
-      />,
-    ];
-  };
+  useEffect(() => {
+    pageRef.current = page;
+    pageCountRef.current = filteredData.length;
+  }, [page, filteredData.length]);
 
   return (
     <div id="dataset" className="bg-yellow-50">
       <div className="sticky top-14 py-4 z-20 bg-white shadow-sm">
         <div className="container flex flex-col space-y-1 md:flex-row items-center">
           <div className="text-neutral-400">
-            Showing {filteredData.length} dataset, page {page}
+            Showing {filteredData.length} dataset.
           </div>
           <div className="flex flex-1"></div>
           <Search
@@ -208,21 +185,34 @@ export const Dataset = () => {
         </div>
 
         {loading ? (
-          <div className="h-40 flex justify-center items-center">
-            <LoadingSpinner />
+          <div className="h-[160px] flex flex-row justify-center items-center">
+            Fetching data{" "}
+            <span className="ml-2">
+              <LoadingSpinner />
+            </span>
           </div>
         ) : null}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 justify-items-center">
           {filterPage().map((item: DatasetProps) => {
             return <Card item={item} key={item.id} />;
           })}
         </div>
 
-        <div>
-          <Pagination>
-            <PaginationContent>{renderPagination()}</PaginationContent>
-          </Pagination>
+        <div
+          className="px-8 lg:px-0 py-4 flex flex-row justify-center items-center space-x-2"
+          ref={scrollRef}
+        >
+          {filteredData.length / PER_PAGE > page && (
+            <Button
+              variant="outline"
+              onClick={() => {
+                setPage(page + 1);
+              }}
+            >
+              Load More...
+            </Button>
+          )}
         </div>
       </div>
     </div>

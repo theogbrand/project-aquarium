@@ -104,10 +104,7 @@ const Card = ({
   return (
     <CardComponent
       key={name}
-      className={cn(
-        "md:break-inside-avoid overflow-hidden relative bg-white",
-        showDetail ? "w-full" : "max-w-md"
-      )}
+      className={cn("overflow-hidden relative bg-white flex flex-col w-full")}
     >
       <CardHeader className="flex flex-row items-center gap-4 pb-2">
         <div className="flex flex-col">
@@ -210,6 +207,8 @@ const Card = ({
           </div>
         ) : null}
       </CardContent>
+
+      <div className="flex flex-1"></div>
 
       <CardFooter className="flex space-x-2 mt-4">
         {renderModality()}
