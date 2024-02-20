@@ -27,6 +27,11 @@ export default function RootLayout({
       <TooltipProvider>
         <body className={inter.className}>{children}</body>
       </TooltipProvider>
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/@speed-highlight/core/dist/themes/visual-studio-dark.css"
+      ></link>
+      <script type="module" src="/seacrowd-catalogue/static.js"></script>
     </html>
   );
 }

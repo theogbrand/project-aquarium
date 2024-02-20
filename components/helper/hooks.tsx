@@ -16,6 +16,9 @@ export interface DatasetProps {
   author: string;
   provider: string;
   dataSize: string;
+  year: string;
+  dataloader: string;
+  subset: string;
 }
 
 export const useDatasetFetch = () => {
@@ -32,7 +35,7 @@ export const useDatasetFetch = () => {
         result = await fetch(FETCH_URL[1]);
         json = await result.json();
       }
-      const dataset = json.map((item: any) => ({
+      const dataset: DatasetProps[] = json.map((item: any) => ({
         id: item["No"],
         name: item["Dataset name"],
         description: item["Dataset description"],
@@ -46,6 +49,10 @@ export const useDatasetFetch = () => {
         license: item["Dataset license"],
         author: `${item["First Name"]} ${item["Last Name"]}`,
         provider: item["Dataset provider"],
+        dataSize: `${item["Total data size"]} ${item["Data size unit"]}`,
+        year: item["Dataset or dataset paper publish year"],
+        dataloader: item["Dataloader name"],
+        subset: item["Subset(s)"],
       }));
       setData(dataset);
       setLoading(false);

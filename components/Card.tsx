@@ -9,10 +9,13 @@ import {
 import {
   Bot,
   Building,
+  Calendar,
+  Code,
   Database,
   Eye,
   FileType,
   FolderCheck,
+  FolderTree,
   Globe,
   Scale,
   ScrollText,
@@ -24,6 +27,17 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+import DialogComponent from "./Dialog";
 
 const Card = ({
   item,
@@ -44,6 +58,10 @@ const Card = ({
     license,
     author,
     provider,
+    dataSize,
+    subset,
+    year,
+    dataloader,
   } = item;
   let { paperLink, hfLink } = item;
 
@@ -177,6 +195,20 @@ const Card = ({
           </div>
         ) : null}
 
+        {showDetail && subset ? (
+          <div className="flex flex-row items-center text-neutral-400 text-sm mt-2">
+            <div className="w-5 mr-2 self-start">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <FolderTree size={20} />
+                </TooltipTrigger>
+                <TooltipContent>Subset</TooltipContent>
+              </Tooltip>
+            </div>
+            <div>{subset}</div>
+          </div>
+        ) : null}
+
         {tasks ? (
           <div className="flex flex-row items-center text-neutral-400 text-sm mt-2">
             <div className="w-5 mr-2 self-start">
@@ -190,6 +222,34 @@ const Card = ({
             <div className={cn(!showDetail && "line-clamp-2")}>
               {formatNewline(tasks)}
             </div>
+          </div>
+        ) : null}
+
+        {dataSize ? (
+          <div className="flex flex-row items-center text-neutral-400 text-sm mt-2">
+            <div className="w-5 mr-2 self-start">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Database size={20} />
+                </TooltipTrigger>
+                <TooltipContent>Data Size</TooltipContent>
+              </Tooltip>
+            </div>
+            <div>{dataSize}</div>
+          </div>
+        ) : null}
+
+        {year ? (
+          <div className="flex flex-row items-center text-neutral-400 text-sm mt-2">
+            <div className="w-5 mr-2 self-start">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Calendar size={20} />
+                </TooltipTrigger>
+                <TooltipContent>Year</TooltipContent>
+              </Tooltip>
+            </div>
+            <div>{year}</div>
           </div>
         ) : null}
 
@@ -214,8 +274,34 @@ const Card = ({
         {renderModality()}
 
         <div className="flex flex-1"></div>
+        {dataloader ? (
+          <Dialog>
+            <DialogTrigger>
+              <Button variant="outline" size="sm">
+                <Code size={20} />
+                <span
+                  className={cn(
+                    "hidden md:block ml-2",
+                    !showDetail && "md:hidden"
+                  )}
+                >
+                  How to use
+                </span>
+              </Button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>How to use</DialogTitle>
+                <DialogDescription>
+                  <DialogComponent dataloader={dataloader} />
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
+        ) : null}
+
         {hfLink ? (
-          <a href={hfLink}>
+          <a href={hfLink} target="_blank">
             <Button variant="outline" size="sm">
               <Bot size={20} />
               <span className="hidden md:block ml-2">HF</span>
@@ -226,7 +312,7 @@ const Card = ({
         {paperLink ? (
           <Tooltip>
             <TooltipTrigger asChild>
-              <a href={paperLink}>
+              <a href={paperLink} target="_blank">
                 <Button variant="outline" size="sm">
                   <ScrollText size={20} />
                   <span className="hidden md:block ml-2">Paper</span>
@@ -238,7 +324,7 @@ const Card = ({
         ) : null}
 
         {datasetLink ? (
-          <a href={datasetLink}>
+          <a href={datasetLink} target="_blank">
             <Button size="sm">
               <Database size={20} className="mr-2" /> Data
             </Button>
