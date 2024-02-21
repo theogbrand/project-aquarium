@@ -3,7 +3,7 @@ import { useEffect } from "react";
 const Dialog = ({ dataloader }: { dataloader: string }) => {
   useEffect(() => {
     setTimeout(() => {
-      (window as any).highlightAll();
+      (window as any).highlightAll({ hideLineNumbers: true });
     }, 500);
   }, []);
   return (
