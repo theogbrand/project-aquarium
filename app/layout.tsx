@@ -31,7 +31,7 @@ export default function RootLayout({
         rel="stylesheet"
         href="https://unpkg.com/@speed-highlight/core/dist/themes/dark.css"
       ></link>
-      <script type="module" src="/static.js"></script>
+      <script type="module" src="/seacrowd-catalogue/static.js"></script>
     </html>
   );
 }
