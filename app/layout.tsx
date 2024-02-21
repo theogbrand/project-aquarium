@@ -29,9 +29,9 @@ export default function RootLayout({
       </TooltipProvider>
       <link
         rel="stylesheet"
-        href="https://unpkg.com/@speed-highlight/core/dist/themes/visual-studio-dark.css"
+        href="https://unpkg.com/@speed-highlight/core/dist/themes/dark.css"
       ></link>
-      <script type="module" src="/seacrowd-catalogue/static.js"></script>
+      <script type="module" src="/static.js"></script>
     </html>
   );
 }

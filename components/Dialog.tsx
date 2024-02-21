@@ -7,13 +7,13 @@ const Dialog = ({ dataloader }: { dataloader: string }) => {
     }, 500);
   }, []);
   return (
-    <div className="">
+    <div className="!text-left">
       <div className="text-base mb-4 mt-4">
         Load this dataset directly with the Datasets library. First, install
         dependency and clone SeaCrowd
       </div>
 
-      <div className="shj-lang-bash block !whitespace-pre-line overflow-x-scroll p-4 rounded-md !text-sm">
+      <div className="shj-lang-bash !whitespace-pre-line overflow-x-scroll p-2 rounded-md !text-sm shj-multiline fira">
         pip install datasets{`\n`}
         git clone https://github.com/SEACrowd/seacrowd-datahub.git
       </div>
@@ -22,7 +22,7 @@ const Dialog = ({ dataloader }: { dataloader: string }) => {
         Then, the dataset can be downloaded locally by the python script below:
       </div>
 
-      <div className="shj-lang-py block !whitespace-pre-line overflow-x-scroll p-4 rounded-md !text-sm">
+      <div className="shj-lang-py !whitespace-pre-line overflow-x-scroll p-2 rounded-md !text-sm shj-multiline fira">
         from datasets import load_dataset{`\n`}
         {`\n`}
         path = "sea-crowd/sewcrowd/sea_datasets/{dataloader}"{`\n`}

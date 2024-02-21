@@ -5,3 +5,8 @@
 html {
   scroll-padding-top: 56px; /* height of sticky header */
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap");
+.fira {
+  font: 14px "Fira Code", monospace !important;
+}
