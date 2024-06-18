@@ -14,18 +14,32 @@ export default function Page() {
           </main>
 
           <p className="text-lg text-muted-foreground">
-            SEACrowd-Catalogue is a part of{" "}
+            SEACrowd Catalogue is a part of{" "}
             <a className="underline" href="https://github.com/SEACrowd">
               SEACrowd initiative
             </a>
-            . SEACrowd-Catalogue functions as a front-end data catalogue listed
-            in SEACrowd, so individuals can easily find Southeast Asia NLP data
+            . SEACrowd Catalogue functions as a front-end data catalogue listed
+            in SEACrowd, so individuals can easily find Southeast Asia data
             for their research and projects.
           </p>
 
           <p className="text-lg text-muted-foreground">
-            This open-source project is initiated and maintained by amazing
-            contributors:
+            Big thanks to our wonderful contributors who have dedicated their time, energy, and effort to grow SEACrowd.
+            None of this could have happened without them. 💕
+
+            Check out our paper together
+            <a
+              href="https://arxiv.org/pdf/2406.10118"
+              target="_blank"
+              className="hover:underline"
+            >
+              "SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages"
+            </a>
+            !
+          </p>
+
+          <p className="text-lg text-muted-foreground">
+            This open-source project is initiated and maintained by:
           </p>
 
           <div className="text-lg">
