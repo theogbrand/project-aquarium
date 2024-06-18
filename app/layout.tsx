@@ -7,8 +7,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SEACrowd Data Catalogue",
-  description: "Dataset Catalogue & Indexing SEACrowd Datasets",
+  title: "SEACrowd Catalogue",
+  description: "SEACrowd Datasheet Catalogue & Indexing",
 };
 
 export default function RootLayout({
