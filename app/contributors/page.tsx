@@ -33,7 +33,7 @@ export default function Page() {
             <a
               href="https://arxiv.org/pdf/2406.10118"
               target="_blank"
-              className="hover:underline"
+              className="underline"
             >
               <b>"SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages"</b>
             </a>
