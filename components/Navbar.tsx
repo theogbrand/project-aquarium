@@ -25,6 +25,10 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
+    href: "https://arxiv.org/pdf/2406.10118",
+    label: "Publication",
+  },
+  {
     href: "https://docs.google.com/spreadsheets/d/1ibbywsC1tQ_sLPX8bUAjC-vrTrUqZgZA46W_sxWw4Ss/edit?usp=sharing",
     label: "Catalogue (CSV)",
   },
