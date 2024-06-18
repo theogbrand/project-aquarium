@@ -1,6 +1,8 @@
-# SEACrowd
+<img width="100%" alt="SEACrowd Logo" src="https://github.com/SEACrowd/.github/blob/main/profile/assets/seacrowd-email-banner-without-logo.png?raw=true">
 
-The first online catalogue for SEACrowd datasets. This catalogue contains X datasets with more than Y metadata annotations for each dataset. You can view the list of all datasets using the link of the website.
+# SEACrowd Catalogue
+
+The first online catalogue for SEACrowd datasheets. This catalogue contains 498 datasets with metadata annotations for each dataset. You can view the list of all datasets [seacrowd.github.io/seacrowd-catalogue](https://seacrowd.github.io/seacrowd-catalogue/).
 
 ## Metadata
 
