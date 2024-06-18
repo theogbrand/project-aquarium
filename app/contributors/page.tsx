@@ -29,7 +29,7 @@ export default function Page() {
           </p>
 
           <p className="text-lg text-muted-foreground">
-            Check out our paper together
+            Check out our paper together{" "}
             <a
               href="https://arxiv.org/pdf/2406.10118"
               target="_blank"
