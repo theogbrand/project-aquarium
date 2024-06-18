@@ -26,14 +26,16 @@ export default function Page() {
           <p className="text-lg text-muted-foreground">
             Big thanks to our wonderful contributors who have dedicated their time, energy, and effort to grow SEACrowd.
             None of this could have happened without them. 💕
+          </p>
 
+          <p className="text-lg text-muted-foreground">
             Check out our paper together
             <a
               href="https://arxiv.org/pdf/2406.10118"
               target="_blank"
               className="hover:underline"
             >
-              "SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages"
+              <b>"SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages"</b>
             </a>
             !
           </p>
