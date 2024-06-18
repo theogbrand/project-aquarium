@@ -29,6 +29,14 @@ const routeList: RouteProps[] = [
     label: "Catalogue",
   },
   {
+    href: "https://github.com/SEACrowd/seacrowd-datahub/",
+    label: "Data Hub",
+  },
+  {
+    href: "https://github.com/SEACrowd/seacrowd-experiments/",
+    label: "Experiments",
+  },
+  {
     href: "/contributors",
     label: "Contributors",
   },
