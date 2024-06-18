@@ -136,7 +136,7 @@ export const Hero = () => {
               variant: "outline",
             })}`}
           >
-            Github Repository
+            Catalogue Repository
             <Github className="ml-2 w-5 h-5" />
           </a>
         </div>
