@@ -26,7 +26,7 @@ interface RouteProps {
 const routeList: RouteProps[] = [
   {
     href: "/",
-    label: "Data Catalogue",
+    label: "Catalogue",
   },
   {
     href: "/contributors",
@@ -65,7 +65,7 @@ export const Navbar = () => {
           </Link>
         ))}
         <a
-          href="https://github.com/SEACrowd/seacrowd-catalogue"
+          href="https://github.com/SEACrowd/"
           target="_blank"
           className={`border ${buttonVariants({ variant: "default" })}`}
         >
