@@ -25,8 +25,8 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "/",
-    label: "Catalogue",
+    href: "https://docs.google.com/spreadsheets/d/1ibbywsC1tQ_sLPX8bUAjC-vrTrUqZgZA46W_sxWw4Ss/edit?usp=sharing",
+    label: "Catalogue (CSV)",
   },
   {
     href: "https://github.com/SEACrowd/seacrowd-datahub/",
