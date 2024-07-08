@@ -119,6 +119,58 @@ export default function Page() {
               <li>
                   <b>Joni</b>bek Mansurov
               </li>
+              <li>
+              <a
+                  href="http://fajrikoto.com/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Fajri</b> Koto{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://www.josephimperial.com/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Joseph</b> Marvin Imperial{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://ruochenzhang.com"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Ruochen</b> Zhang{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://gentawinata.com/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Genta</b> Indra Winata{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </li>
+              <li>
+              <a
+                  href="https://onnokampman.github.io"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Onno</b> P. Kampman{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+                  <b>Joel</b> Ruben Antony Moniz
+              </li>
             </ul>
           </div>
         </div>
