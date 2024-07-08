@@ -149,6 +149,75 @@ export default function Page() {
                   <ArrowUpRight size={20} className="inline" />
               </a>
               </li>
+              <li>
+              <a
+                  href="https://gentawinata.com/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Genta</b> Indra Winata{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://onnokampman.github.io"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Onno</b> P. Kampman{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+                  <b>Joel</b> Ruben Antony Moniz
+              </li>
+              <li>
+              <a
+                  href="https://muhammadravi251001.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  Muhammad <b>Ravi</b> Shulthan Habibi{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+                  Frederikus <b>Hudi</b>
+              </li>
+              <li>
+              <a
+                  href="https://sedrickkeh.github.io"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Sedrick</b> Keh{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://afaji.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  Alham Fikri <b>Aji</b>{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+                  <b>Railey</b> Montalan
+              </li>
+              <li>
+              <a
+                  href="https://mrpeerat.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Peerat</b> Limkonchotiwat{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
             </ul>
           </div>
         </div>
