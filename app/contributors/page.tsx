@@ -26,7 +26,7 @@ export default function Page() {
           <p className="text-lg text-muted-foreground">
             Big thanks to our wonderful contributors who have dedicated their time, energy, and effort to grow SEACrowd.
             None of this could have happened without them. 💕
-            Special appreciation for <a className="underline" href="https://sonnylab.com">Sonny Lazuardi</a>, who has designed, developed, and maintained this beautiful catalogue.
+            Special appreciation for <a className="underline" href="https://sonnylab.com"><b>Sonny Lazuardi</b>{" "}<ArrowUpRight size={20} className="inline" /></a>, who has designed, developed, and maintained this beautiful catalogue.
           </p>
 
           <p className="text-lg text-muted-foreground">
@@ -352,6 +352,191 @@ export default function Page() {
                   <b>Lucky</b> Susanto{" "}
                   <ArrowUpRight size={20} className="inline" />
               </a>
+              </li>
+              <li>
+              <a
+                  href="https://reynardryanda.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Reynard</b> Adha Ryanda{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://sonnylab.com"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Sonny</b> Lazuardi Hermawan{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://danjohnvelasco.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Dan</b> John Velasco{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://dehanalkautsar.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  Muhammad <b>Dehan</b> Al Kautsar{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://willyfh.github.io"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Willy</b> Fitra Hendria{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://machinetranslation.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Yasmin</b> Moslem{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://noahrflynn.com/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Noah</b> Flynn{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://faridlazuarda.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  Muhammad <b>Farid</b> Adilazuarda{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://alex-haochenli.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Haochen</b> Li{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://github.com/Enliven26"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Johanes</b> Lee{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+                  R. <b>Damanhuri</b>
+              </li>
+              <li>
+              <a
+                  href="https://ssun32.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Shuo</b> Sun{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://mrqorib.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  Muhammad Reza <b>Qorib</b>{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+                  <b>Amir</b>bek Djanibekov
+              </li>
+              <li>
+                  <b>Wei Qi</b> Leong
+              </li>
+              <li>
+              <a
+                  href="dovanquyet.github.io"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Quyet</b> V. Do{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://muennighoff.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Niklas</b> Muennighoff{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://tanradap.github.io"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Tanrada</b> Pansuwan{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://ilhamfp.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Ilham</b> Firdausi Putra{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://yana-xuyan.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  Yan Xu (<b>Yana</b>){" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+                  <b>Ayu</b> Purwarianti
+              </li>
+              <li>
+                  Ngee Chia <b>Tai</b>
               </li>
             </ul>
           </div>
