@@ -149,28 +149,6 @@ export default function Page() {
                   <ArrowUpRight size={20} className="inline" />
               </a>
               </li>
-              <li>
-              <a
-                  href="https://gentawinata.com/"
-                  target="_blank"
-                  className="hover:underline"
-              >
-                  <b>Genta</b> Indra Winata{" "}
-                  <ArrowUpRight size={20} className="inline" />
-              </li>
-              <li>
-              <a
-                  href="https://onnokampman.github.io"
-                  target="_blank"
-                  className="hover:underline"
-              >
-                  <b>Onno</b> P. Kampman{" "}
-                  <ArrowUpRight size={20} className="inline" />
-              </a>
-              </li>
-              <li>
-                  <b>Joel</b> Ruben Antony Moniz
-              </li>
             </ul>
           </div>
         </div>
