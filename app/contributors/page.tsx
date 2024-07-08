@@ -218,6 +218,58 @@ export default function Page() {
                   <ArrowUpRight size={20} className="inline" />
               </a>
               </li>
+              <li>
+                  <b>R</b>yan <b>I</b>gnatius
+              </li>
+              <li>
+                  <b>Joanito</b> Agili Lopo
+              </li>
+              <li>
+                  <b>William</b> Nixon
+              </li>
+              <li>
+              <a
+                  href="https://tellarin.com/borje/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Börje</b> F. Karlsson{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://jamesjaya.com"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>James</b> Jaya{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="rayendito.github.io"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Ryandito</b> Diandaru{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="gyyz.github.io"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Yuze</b> Gao{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+                  <b>William</b> Tjhi
+              </li>
             </ul>
           </div>
         </div>
