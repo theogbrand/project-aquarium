@@ -270,6 +270,89 @@ export default function Page() {
               <li>
                   <b>William</b> Tjhi
               </li>
+              <li>
+              <a
+                  href="https://patrickamadeus.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Patrick</b> Amadeus{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://binwang28.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Bin</b> Wang{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://blaisecruz.com"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  Jan Christian <b>Blaise</b> Cruz{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://chenxwh.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Chenxi</b> Whitehouse{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+                  <b>Ivan</b> Halim Parmonangan
+              </li>
+              <li>
+              <a
+                  href="https://khelli07.vercel.app/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  Maria <b>Khelli</b>{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://www.ruder.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Sebastian</b> Ruder{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://sites.coecis.cornell.edu/wenyuzhang/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Wenyu</b> Zhang{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
+              <li>
+              <a
+                  href="https://luckysusanto.github.io/"
+                  target="_blank"
+                  className="hover:underline"
+              >
+                  <b>Lucky</b> Susanto{" "}
+                  <ArrowUpRight size={20} className="inline" />
+              </a>
+              </li>
             </ul>
           </div>
         </div>
