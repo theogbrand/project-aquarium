@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Navbar } from "@/components/Navbar"; // Add this import
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +27,10 @@ export default function RootLayout({
         ></meta>
       </Head>
       <TooltipProvider>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <Navbar /> {/* Add the Navbar component here */}
+          {children}
+        </body>
       </TooltipProvider>
       <link
         rel="stylesheet"
