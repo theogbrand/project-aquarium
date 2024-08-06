@@ -19,7 +19,24 @@ const markers = [
     { markerOffset: -15, name: "Hanoi", coordinates: [105.8342, 21.0285] },
     { markerOffset: -15, name: "Bangkok", coordinates: [100.5018, 13.7563] },
     { markerOffset: 25, name: "Naypyidaw", coordinates: [96.1292, 19.7633] },
+    { markerOffset: -15, name: "Vientiane", coordinates: [102.4955, 19.8563] },
 ];
+
+const getFillColor = (name: string) => {
+    const colors: { [key: string]: string } = {
+        "Singapore": "#FF5533",
+        "Malaysia": "#00FF00",
+        "Philippines": "#ADD8E6",
+        "Indonesia": "#FFA500",
+        "Cambodia": "#008080",
+        "Vietnam": "#FFD700",
+        "Thailand": "#FF69B4",
+        "Myanmar": "#9370DB",
+        "Brunei": "#FF6347",
+        "Laos": "#7CFC00",
+    };
+    return colors[name] || "#D6D6DA"; // Default color if not found
+};
 
 export const RegionMap = () => {
     const handleMarkerClick = (id: string) => {
@@ -45,10 +62,9 @@ export const RegionMap = () => {
                                     geography={geo}
                                     data-tooltip-id="my-tooltip"
                                     data-tooltip-content={geo.properties.name}
-                                    fill="#FF5533"
-                                    stroke="#000000"
+                                    stroke="black"
                                     style={{
-                                        default: { fill: "#D6D6DA" },
+                                        default: { fill: getFillColor(geo.properties.name) },
                                         hover: { fill: "#F53" },
                                         pressed: { fill: "#E42" },
                                     }}
@@ -58,11 +74,11 @@ export const RegionMap = () => {
                     </Geographies>
                     {markers.map(({ name, coordinates, markerOffset }) => (
                         <Marker key={name} coordinates={coordinates as [number, number]} onClick={() => handleMarkerClick(name)}>
-                            <circle r={10} fill="#F00" stroke="#fff" strokeWidth={2} />
+                            <circle r={5} fill="#F00" stroke="#fff" strokeWidth={2} />
                             <text
                                 textAnchor="middle"
                                 y={markerOffset}
-                                style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}
+                                style={{ fontFamily: "system-ui", fill: "black", fontSize: "15px", fontWeight: "900" }}
                             >
                                 {name}
                             </text>
