@@ -8,20 +8,18 @@ import features from "@/lib/features.json";
 const markers = [
     {
         markerOffset: -15,
-        name: "Buenos Aires",
-        coordinates: [-58.3816, -34.6037]
+        name: "Singapore",
+        coordinates: [103.8198, 1.3521]
     },
-    { markerOffset: -15, name: "La Paz", coordinates: [-68.1193, -16.4897] },
-    { markerOffset: 25, name: "Brasilia", coordinates: [-47.8825, -15.7942] },
-    { markerOffset: 25, name: "Santiago", coordinates: [-70.6693, -33.4489] },
-    { markerOffset: 25, name: "Bogota", coordinates: [-74.0721, 4.711] },
-    { markerOffset: 25, name: "Quito", coordinates: [-78.4678, -0.1807] },
-    { markerOffset: -15, name: "Georgetown", coordinates: [-58.1551, 6.8013] },
-    { markerOffset: -15, name: "Asuncion", coordinates: [-57.5759, -25.2637] },
-    { markerOffset: 25, name: "Paramaribo", coordinates: [-55.2038, 5.852] },
-    { markerOffset: 25, name: "Montevideo", coordinates: [-56.1645, -34.9011] },
-    { markerOffset: -15, name: "Caracas", coordinates: [-66.9036, 10.4806] },
-    { markerOffset: -15, name: "Lima", coordinates: [-77.0428, -12.0464] }
+    { markerOffset: -15, name: "Kuala Lumpur", coordinates: [101.6869, 3.1390] },
+    { markerOffset: 25, name: "Manila", coordinates: [120.9842, 14.5995] },
+    { markerOffset: 25, name: "Jakarta", coordinates: [106.8456, -6.2088] },
+    { markerOffset: 25, name: "Bandar Seri Begawan", coordinates: [114.9424, 4.9031] },
+    { markerOffset: 25, name: "Phnom Penh", coordinates: [104.9282, 11.5564] },
+    { markerOffset: -15, name: "Hanoi", coordinates: [105.8342, 21.0285] },
+    { markerOffset: -15, name: "Bangkok", coordinates: [100.5018, 13.7563] },
+    { markerOffset: 25, name: "Vientiane", coordinates: [102.6331, 17.9757] },
+    { markerOffset: 25, name: "Naypyidaw", coordinates: [96.1292, 19.7633] },
 ];
 
 export const RegionMap = () => {
