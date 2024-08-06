@@ -36,8 +36,8 @@ export const RegionMap = () => {
             <ComposableMap
                 projection="geoAzimuthalEqualArea"
                 projectionConfig={{
-                    rotate: [58, 20, 0],
-                    scale: 400
+                    rotate: [-110, -15, 0],
+                    scale: 700
                 }}>
                 <ZoomableGroup zoom={1}>
                     <Geographies geography={features}>
