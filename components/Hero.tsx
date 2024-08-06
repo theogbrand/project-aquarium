@@ -4,6 +4,7 @@ import { buttonVariants } from "./ui/button";
 import { Database, Github, MapPin } from "lucide-react";
 import createGlobe, { Marker } from "cobe";
 import { useEffect, useRef, useState } from "react";
+import { RegionMap } from "./Map";
 
 interface MarkerData {
   location: number[];
@@ -143,10 +144,10 @@ export const Hero = () => {
       </div>
 
       <div className="bg-yellow-50 rounded-3xl w-full relative mt-20 lg:mt-0">
-        <div className="h-[300px] w-full bg-yellow-50 rounded-3xl md:hidden"></div>
-        <div className="h-[400px] w-full overflow-hidden absolute left-0 top-0 md:relative -mt-[100px] pointer-events-none">
-          <div className="h-[450px] w-[450px] overflow-hidden absolute top-[40px] right-[40px] rounded-3xl">
-            <canvas
+        {/* <div className="h-[300px] w-full bg-yellow-50 rounded-3xl md:hidden"></div> */}
+        {/* <div className="h-[400px] w-full overflow-hidden absolute left-0 top-0 md:relative -mt-[100px] pointer-events-none"> */}
+          {/* <div className="h-[450px] w-[450px] overflow-hidden absolute top-[40px] right-[40px] rounded-3xl"> */}
+            {/* <canvas
               // @ts-ignore
               ref={canvasRef}
               style={{
@@ -155,14 +156,15 @@ export const Hero = () => {
                 maxWidth: "100%",
                 aspectRatio: 1,
               }}
-            />
-          </div>
-        </div>
-        <div className="absolute left-0 bottom-0 p-3 flex flex-row items-center">
+            /> */}
+            <RegionMap />
+          {/* </div> */}
+        {/* </div> */}
+        {/* <div className="absolute left-0 bottom-0 p-3 flex flex-row items-center">
           <Button variant="outline" onClick={randomCountry}>
             <MapPin size={20} className="mr-2" /> {country}
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
