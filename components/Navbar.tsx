@@ -67,7 +67,7 @@ export const Navbar = () => {
   const renderMenu = () => {
     return (
       <>
-        {routeList.map((route: RouteProps, i) => (
+        {/* {routeList.map((route: RouteProps, i) => (
           <Link
             href={route.href}
             key={i}
@@ -77,7 +77,7 @@ export const Navbar = () => {
           >
             {route.label}
           </Link>
-        ))}
+        ))} */}
         {/* <a
           href="https://github.com/SEACrowd/"
           target="_blank"
@@ -111,7 +111,7 @@ export const Navbar = () => {
                 </Menu>
               </SheetTrigger>
 
-              <SheetContent side={"left"}>
+              <SheetContent side={"right"}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl">
                     {renderLogo()}
