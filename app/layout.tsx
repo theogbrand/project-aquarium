@@ -9,8 +9,8 @@ import { Navbar } from "@/components/Navbar"; // Add this import
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SEACrowd Catalogue",
-  description: "SEACrowd Datasheet Catalogue & Indexing",
+  title: "Project Aquarium",
+  description: "Catalog of SEA data",
 };
 
 export default function RootLayout({
