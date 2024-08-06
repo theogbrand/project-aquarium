@@ -4,6 +4,9 @@ import React from "react"
 import { ComposableMap, Geographies, Geography, ZoomableGroup, Marker } from "react-simple-maps"
 import { Tooltip } from "react-tooltip";
 import features from "@/lib/features.json";
+import Link from 'next/link'
+
+
 
 const markers = [
     {
@@ -41,7 +44,6 @@ const getFillColor = (name: string) => {
 export const RegionMap = () => {
     const handleMarkerClick = (id: string) => {
         console.log(`Marker ${id} clicked`);
-        // Add your custom logic here
     };
 
     return (
@@ -74,13 +76,13 @@ export const RegionMap = () => {
                     </Geographies>
                     {markers.map(({ name, coordinates, markerOffset }) => (
                         <Marker key={name} coordinates={coordinates as [number, number]} onClick={() => handleMarkerClick(name)}>
-                            <circle r={5} fill="#F00" stroke="#fff" strokeWidth={2} />
+                            <Link href={`/catalogs/${encodeURIComponent(name.toLowerCase())}`}><circle r={5} fill="#F00" stroke="#fff" strokeWidth={2} /></Link>
                             <text
                                 textAnchor="middle"
                                 y={markerOffset}
                                 style={{ fontFamily: "system-ui", fill: "black", fontSize: "15px", fontWeight: "900" }}
                             >
-                                {name}
+                                <Link href={`/catalogs/${encodeURIComponent(name)}`}>{name}</Link>
                             </text>
                         </Marker>
                     ))}
