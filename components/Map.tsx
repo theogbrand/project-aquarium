@@ -18,7 +18,6 @@ const markers = [
     { markerOffset: 25, name: "Phnom Penh", coordinates: [104.9282, 11.5564] },
     { markerOffset: -15, name: "Hanoi", coordinates: [105.8342, 21.0285] },
     { markerOffset: -15, name: "Bangkok", coordinates: [100.5018, 13.7563] },
-    { markerOffset: 25, name: "Vientiane", coordinates: [102.6331, 17.9757] },
     { markerOffset: 25, name: "Naypyidaw", coordinates: [96.1292, 19.7633] },
 ];
 
