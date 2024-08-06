@@ -104,11 +104,11 @@ export const Hero = () => {
     <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
       <div className="text-center lg:text-start space-y-6">
         <main className="text-5xl md:text-6xl font-bold">
-          <h1 className="inline">SEACrowd Catalogue</h1>
+          <h1 className="inline">Contribute to SEA Data</h1>
         </main>
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          This catalog is the result of the{" "}
+          We are part of the{" "}
           <a
             target="_blank"
             href="https://github.com/SEACrowd"
@@ -116,14 +116,15 @@ export const Hero = () => {
           >
             SEACrowd
           </a>{" "}
-          initiative. Consider{" "}
-          <Link href="/contributors" className="underline">
-            citing us
-          </Link>{" "}
-          alongside the dataset you used for your scientific work.
+          initiative, {" "}
+          <Link href="/" className="underline">
+            Project SEALD
+          </Link>{" "} and <Link href="/" className="underline">
+            SEA-LION
+          </Link>{" "}.
         </p>
 
-        <div className="space-y-4 md:space-y-0 md:space-x-4">
+        {/* <div className="space-y-4 md:space-y-0 md:space-x-4">
           <a href="#dataset">
             <Button className="w-full md:w-1/3">
               Browse Dataset <Database className="ml-2 w-5 h-5" />
@@ -140,14 +141,14 @@ export const Hero = () => {
             Catalogue Repository
             <Github className="ml-2 w-5 h-5" />
           </a>
-        </div>
+        </div> */}
       </div>
 
       <div className="bg-yellow-50 rounded-3xl w-full relative mt-20 lg:mt-0">
         {/* <div className="h-[300px] w-full bg-yellow-50 rounded-3xl md:hidden"></div> */}
         {/* <div className="h-[400px] w-full overflow-hidden absolute left-0 top-0 md:relative -mt-[100px] pointer-events-none"> */}
-          {/* <div className="h-[450px] w-[450px] overflow-hidden absolute top-[40px] right-[40px] rounded-3xl"> */}
-            {/* <canvas
+        {/* <div className="h-[450px] w-[450px] overflow-hidden absolute top-[40px] right-[40px] rounded-3xl"> */}
+        {/* <canvas
               // @ts-ignore
               ref={canvasRef}
               style={{
@@ -157,8 +158,8 @@ export const Hero = () => {
                 aspectRatio: 1,
               }}
             /> */}
-            <RegionMap />
-          {/* </div> */}
+        <RegionMap />
+        {/* </div> */}
         {/* </div> */}
         {/* <div className="absolute left-0 bottom-0 p-3 flex flex-row items-center">
           <Button variant="outline" onClick={randomCountry}>
