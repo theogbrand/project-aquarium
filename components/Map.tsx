@@ -46,6 +46,8 @@ export const RegionMap = () => {
                                     geography={geo}
                                     data-tooltip-id="my-tooltip"
                                     data-tooltip-content={geo.properties.name}
+                                    fill="#FF5533"
+                                    stroke="#000000"
                                     style={{
                                         default: { fill: "#D6D6DA" },
                                         hover: { fill: "#F53" },

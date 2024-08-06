@@ -144,7 +144,7 @@ export const Hero = () => {
         </div> */}
       </div>
 
-      <div className="bg-yellow-50 rounded-3xl w-full relative mt-20 lg:mt-0">
+      <div className="bg-blue-200 rounded-3xl w-full relative mt-20 lg:mt-0">
         {/* <div className="h-[300px] w-full bg-yellow-50 rounded-3xl md:hidden"></div> */}
         {/* <div className="h-[400px] w-full overflow-hidden absolute left-0 top-0 md:relative -mt-[100px] pointer-events-none"> */}
         {/* <div className="h-[450px] w-[450px] overflow-hidden absolute top-[40px] right-[40px] rounded-3xl"> */}
