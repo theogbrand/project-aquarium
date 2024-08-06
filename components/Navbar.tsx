@@ -17,6 +17,7 @@ import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import DropDown from "./ui/dropdown";
 
 interface RouteProps {
   href: string;
@@ -85,6 +86,7 @@ export const Navbar = () => {
           <Github className="mr-2 w-5 h-5" />
           Github
         </a> */}
+        <DropDown />
       </>
     );
   };
@@ -123,7 +125,7 @@ export const Navbar = () => {
           </span>
 
           {/* desktop */}
-          {/* <div className="hidden md:flex gap-2">{renderMenu()}</div> */}
+          <div className="hidden md:flex gap-2">{renderMenu()}</div>
         </NavigationMenuList>
       </NavigationMenu>
     </header>
