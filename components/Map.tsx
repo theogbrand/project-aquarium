@@ -25,6 +25,11 @@ const markers = [
 ];
 
 export const RegionMap = () => {
+    const handleMarkerClick = (id: string) => {
+        console.log(`Marker ${id} clicked`);
+        // Add your custom logic here
+    };
+
     return (
 
         <div>
@@ -53,7 +58,7 @@ export const RegionMap = () => {
                         }
                     </Geographies>
                     {markers.map(({ name, coordinates, markerOffset }) => (
-                        <Marker key={name} coordinates={coordinates as [number, number]}>
+                        <Marker key={name} coordinates={coordinates as [number, number]} onClick={() => handleMarkerClick(name)}>
                             <circle r={10} fill="#F00" stroke="#fff" strokeWidth={2} />
                             <text
                                 textAnchor="middle"
