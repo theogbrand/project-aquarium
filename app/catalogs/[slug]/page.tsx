@@ -21,7 +21,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             <section className="container grid lg:grid-cols-2 place-items-start py-20 md:py-32 gap-10">
                 <div className="text-start space-y-6">
                     <main className="text-5xl md:text-6xl font-bold">
-                        <h1 className="inline">{cityToCountry[params.slug as keyof typeof cityToCountry]}</h1>
+                        <h1 className="inline">{cityToCountry[params.slug.replace(/-/g, ' ') as keyof typeof cityToCountry]}</h1>
                     </main>
 
                     <p className="text-lg text-muted-foreground">

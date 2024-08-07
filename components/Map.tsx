@@ -76,13 +76,13 @@ export const RegionMap = () => {
                     </Geographies>
                     {markers.map(({ name, coordinates, markerOffset }) => (
                         <Marker key={name} coordinates={coordinates as [number, number]} onClick={() => handleMarkerClick(name)}>
-                            <Link href={`/catalogs/${encodeURIComponent(name.toLowerCase())}`}><circle r={5} fill="#F00" stroke="#fff" strokeWidth={2} /></Link>
+                            <Link href={`/catalogs/${encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'))}`}><circle r={5} fill="#F00" stroke="#fff" strokeWidth={2} /></Link>
                             <text
                                 textAnchor="middle"
                                 y={markerOffset}
                                 style={{ fontFamily: "system-ui", fill: "black", fontSize: "15px", fontWeight: "900" }}
                             >
-                                <Link href={`/catalogs/${encodeURIComponent(name)}`}>{name}</Link>
+                                <Link href={`/catalogs/${encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-'))}`}>{name}</Link>
                             </text>
                         </Marker>
                     ))}
