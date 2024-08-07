@@ -25,7 +25,7 @@ import { NumberOfChildrenPlacement } from "react-d3-treemap";
 //   className?: string;
 // }
 
-export default function Page() {
+export default function TreemapComponent() {
   return (
     <>
       {/* <TreeMapCSS /> */}
