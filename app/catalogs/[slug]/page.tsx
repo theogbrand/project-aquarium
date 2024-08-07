@@ -13,13 +13,9 @@ export default function Page({ params }: { params: { slug: string } }) {
                     </main>
 
                     <p className="text-lg text-muted-foreground">
-                        SEACrowd Catalogue is a part of{" "}
-                        <a className="underline" href="https://github.com/SEACrowd">
-                            SEACrowd initiative
-                        </a>
-                        . SEACrowd Catalogue functions as a front-end data catalogue listed
-                        in SEACrowd, so individuals can easily find Southeast Asia data
-                        for their research and projects.
+                        Insert Summary of data sources here<br />
+                        <br />
+                        Example: Datasets contain rich diversity that come from sources provided from various contributors, public and private.
                     </p>
                 </div>
                 <div className="bg-gray-50">
