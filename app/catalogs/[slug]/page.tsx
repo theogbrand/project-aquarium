@@ -1,6 +1,41 @@
+import React from "react";
+import Treemap from '@/components/Treemap'
+import "react-d3-treemap/dist/react.d3.treemap.css";
+
+
 export default function Page({ params }: { params: { slug: string } }) {
-    return <div>My Post: {params.slug}</div>
+    return (
+        <div className="min-h-svh">
+            <section className="container grid lg:grid-cols-2 place-items-start py-20 md:py-32 gap-10">
+                <div className="text-start space-y-6">
+                    <main className="text-5xl md:text-6xl font-bold">
+                        <h1 className="inline">{params.slug}</h1>
+                    </main>
+
+                    <p className="text-lg text-muted-foreground">
+                        SEACrowd Catalogue is a part of{" "}
+                        <a className="underline" href="https://github.com/SEACrowd">
+                            SEACrowd initiative
+                        </a>
+                        . SEACrowd Catalogue functions as a front-end data catalogue listed
+                        in SEACrowd, so individuals can easily find Southeast Asia data
+                        for their research and projects.
+                    </p>
+                </div>
+                <div className="bg-gray-50">
+                    <div className="w-full relative">
+                        {/* <img src="/seacrowd-catalogue/contributor.jpg" alt="contributor" /> */}
+                        <Treemap />
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
 }
+
+// export default function Page({ params }: { params: { slug: string } }) {
+//     return <div>My Post: {params.slug}</div>
+// }
 
 export async function generateStaticParams() {
 
