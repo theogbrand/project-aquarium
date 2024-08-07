@@ -8,10 +8,15 @@ import dynamic from "next/dynamic";
 import { NumberOfChildrenPlacement } from "react-d3-treemap";
 
 // Dynamically import TreeMap with ssr: false
-const TreeMap = dynamic(() => import("react-d3-treemap"), {
-  ssr: false,
-  loading: () => <p>Loading...</p>
-});
+// const TreeMap = dynamic(() => import("react-d3-treemap"), {
+//   ssr: false,
+//   loading: () => <p>Loading...</p>
+// });
+
+const TreemapComponent = dynamic(
+  () => import('react-d3-treemap').then((mod) => mod.default),
+  { ssr: false }
+)
 
 // interface TreeMapInPutData {
 //   name: string;
@@ -24,7 +29,7 @@ export default function Page() {
   return (
     <>
       {/* <TreeMapCSS /> */}
-      <TreeMap
+      <TreemapComponent
         id="myTreeMap"
         numberOfChildrenPlacement={NumberOfChildrenPlacement.TopRight}
         height={500}
