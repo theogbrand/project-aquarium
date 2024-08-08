@@ -2,20 +2,17 @@ import { Fragment } from 'react'
 
 const locations = [
     {
-        country: 'Phillipines',
+        country: 'Philippines',
         people: [
-            { contributor: 'Lindsay Walton', rank: 1, score: 100 },
-            { contributor: 'Courtney Henry', rank: 2, score: 90 },
+            { contributor: 'CAIR', rank: 1, score: 100 },
         ],
     },
     {
         country: 'Thailand',
         people: [
-            { contributor: 'Lindsay Walton', rank: 1, score: 100 },
-            { contributor: 'Courtney Henry', rank: 2, score: 90 },
+            { contributor: 'VISTEC', rank: 1, score: 100 },
         ],
     }
-    // More people...
 ]
 
 function classNames(...classes: string[]) {
