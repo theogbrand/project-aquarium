@@ -170,7 +170,7 @@ export const Hero = () => {
         </div> */}
         </div>
       </section>
-      <div className="container mx-auto">
+      <div className="container mx-auto min-h-screen">
         <h1 className="text-4xl font-bold text-center my-8">Leaderboard</h1>
         <Leaderboard />
       </div>
