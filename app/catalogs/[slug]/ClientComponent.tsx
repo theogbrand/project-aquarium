@@ -20,8 +20,8 @@ const cityToCountry = {
 export default function ClientComponent({ slug }: { slug: string }) {
     return (
         <div className="min-h-svh">
-            <section className="container grid lg:grid-cols-2 place-items-start py-20 md:py-32 gap-10">
-                <div className="text-start space-y-6">
+            <section className="container flex flex-col lg:flex-row items-start py-20 md:py-32 gap-10">
+                <div className="text-start space-y-6 lg:w-1/2">
                     <main className="text-5xl md:text-6xl font-bold">
                         <h1 className="inline">{cityToCountry[slug.replace(/-/g, ' ') as keyof typeof cityToCountry]}</h1>
                     </main>
