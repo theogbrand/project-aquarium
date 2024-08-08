@@ -2,12 +2,19 @@ import { Fragment } from 'react'
 
 const locations = [
     {
-        name: 'Edinburgh',
+        country: 'Phillipines',
         people: [
-            { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
-            { name: 'Courtney Henry', title: 'Designer', email: 'courtney.henry@example.com', role: 'Admin' },
+            { contributor: 'Lindsay Walton', rank: 1, score: 100 },
+            { contributor: 'Courtney Henry', rank: 2, score: 90 },
         ],
     },
+    {
+        country: 'Thailand',
+        people: [
+            { contributor: 'Lindsay Walton', rank: 1, score: 100 },
+            { contributor: 'Courtney Henry', rank: 2, score: 90 },
+        ],
+    }
     // More people...
 ]
 
@@ -25,48 +32,45 @@ export default function Leaderboard() {
                             <thead className="bg-white">
                                 <tr>
                                     <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3">
-                                        Name
+                                        Rank
                                     </th>
                                     <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                                        Title
+                                        Institution/Contributor
                                     </th>
                                     <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                                        Email
-                                    </th>
-                                    <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
-                                        Role
+                                        Score
                                     </th>
                                     <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-3">
-                                        <span className="sr-only">Edit</span>
+                                        <span className="sr-only">View</span>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody className="bg-white">
                                 {locations.map((location) => (
-                                    <Fragment key={location.name}>
+                                    <Fragment key={location.country}>
                                         <tr className="border-t border-gray-200">
                                             <th
                                                 scope="colgroup"
                                                 colSpan={5}
                                                 className="bg-gray-50 py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3"
                                             >
-                                                {location.name}
+                                                {location.country}
                                             </th>
                                         </tr>
                                         {location.people.map((person, personIdx) => (
                                             <tr
-                                                key={person.email}
+                                                key={person.contributor}
                                                 className={classNames(personIdx === 0 ? 'border-gray-300' : 'border-gray-200', 'border-t')}
                                             >
-                                                <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3">
-                                                    {person.name}
+                                                <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm text-gray-500 sm:pl-3">
+                                                    {person.rank}
                                                 </td>
-                                                <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.title}</td>
-                                                <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.email}</td>
-                                                <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.role}</td>
+                                                <td className="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-900">{person.contributor}</td>
+                                                <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{person.score}</td>
                                                 <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3">
-                                                    <a href="#" className="text-indigo-600 hover:text-indigo-900">
-                                                        Edit<span className="sr-only">, {person.name}</span>
+                                                    {/* <a href={`/catalogs/${person.contributor}`} className="text-indigo-600 hover:text-indigo-900"> */}
+                                                    <a href={`#`} className="text-indigo-600 hover:text-indigo-900">
+                                                        View data<span className="sr-only">, {person.contributor}</span>
                                                     </a>
                                                 </td>
                                             </tr>
