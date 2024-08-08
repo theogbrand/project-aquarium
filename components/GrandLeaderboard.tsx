@@ -19,7 +19,7 @@ function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Leaderboard() {
+export default function GrandLeaderboard() {
     return (
         <div className="px-4 sm:px-6 lg:px-8">
             <div className="mt-8 flow-root">
@@ -45,6 +45,15 @@ export default function Leaderboard() {
                             <tbody className="bg-white">
                                 {locations.map((location) => (
                                     <Fragment key={location.country}>
+                                        <tr className="border-t border-gray-200">
+                                            <th
+                                                scope="colgroup"
+                                                colSpan={5}
+                                                className="bg-gray-50 py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-3"
+                                            >
+                                                {location.country}
+                                            </th>
+                                        </tr>
                                         {location.people.map((person, personIdx) => (
                                             <tr
                                                 key={person.contributor}

@@ -5,7 +5,7 @@ import { Database, Github, MapPin } from "lucide-react";
 import createGlobe, { Marker } from "cobe";
 import { useEffect, useRef, useState } from "react";
 import { RegionMap } from "./Map";
-import Leaderboard from "@/components/Leaderboard";
+import GrandLeaderboard from "@/components/GrandLeaderboard";
 
 interface MarkerData {
   location: number[];
@@ -172,7 +172,7 @@ export const Hero = () => {
       </section>
       <div className="container mx-auto min-h-screen">
         <h1 className="text-4xl font-bold text-center my-8">Leaderboard</h1>
-        <Leaderboard />
+        <GrandLeaderboard />
       </div>
 
     </>
