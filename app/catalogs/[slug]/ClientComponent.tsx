@@ -22,13 +22,14 @@ const cityToCountry = {
 export interface IData {
     label: string;
     value: number;
+    color: string;
 }
 
 const BAR_CHART_DATA: IData[] = [
-    { label: "Text", value: 100 },
-    { label: "Speech", value: 200 },
-    { label: "Video", value: 50 },
-    { label: "Audio", value: 150 }
+    { label: "Text", value: 100, color: "#1a4b8f" },
+    { label: "Speech", value: 200, color: "#a31212" },
+    { label: "Video", value: 50, color: "#0e7f17" },
+    { label: "Audio", value: 150, color: "#b36d0f" }
 ];
 
 export default function ClientComponent({ slug }: { slug: string }) {

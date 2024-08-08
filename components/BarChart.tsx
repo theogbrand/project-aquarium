@@ -11,6 +11,7 @@ import {
 export interface IData {
     label: string;
     value: number;
+    color: string;
 }
 
 interface BarChartProps {
@@ -60,14 +61,14 @@ function AxisLeft({ scale }: AxisLeftProps) {
 function Bars({ data, height, scaleX, scaleY }: BarsProps) {
     return (
         <>
-            {data.map(({ value, label }) => (
+            {data.map(({ value, label, color }) => (
                 <rect
                     key={`bar-${label}`}
                     x={scaleX(label)}
                     y={scaleY(value)}
                     width={scaleX.bandwidth()}
                     height={height - scaleY(value)}
-                    fill="teal"
+                    fill={color}
                 />
             ))}
         </>
