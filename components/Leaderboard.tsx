@@ -7,12 +7,6 @@ const locations = [
             { contributor: 'CAIR', rank: 1, score: 100 },
         ],
     },
-    {
-        country: 'Thailand',
-        people: [
-            { contributor: 'VISTEC', rank: 1, score: 100 },
-        ],
-    }
 ]
 
 function classNames(...classes: string[]) {

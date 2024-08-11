@@ -26,12 +26,10 @@ export const data = {
             ]
         },
         {
-            name: "others-1",
+            name: "raw-uncategorized",
             children: [
-                { name: "DirtySprite", value: 8833 },
-                { name: "LineSprite", value: 1732 },
-                { name: "RectSprite", value: 3623 },
-                { name: "TextSprite", value: 10066 }
+                { name: "Mommy Normie 1hr", value: 8833 },
+                { name: "DJ Nice", value: 6504 },
             ]
         },
         {
