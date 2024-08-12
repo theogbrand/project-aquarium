@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { Database, Github, MapPin } from "lucide-react";
 import createGlobe, { Marker } from "cobe";
 import { useEffect, useRef, useState } from "react";
+import { RegionMap } from "./Map";
+import GrandLeaderboard from "@/components/GrandLeaderboard";
 
 interface MarkerData {
   location: number[];
@@ -100,29 +104,31 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
-      <div className="text-center lg:text-start space-y-6">
-        <main className="text-5xl md:text-6xl font-bold">
-          <h1 className="inline">SEACrowd Catalogue</h1>
-        </main>
+    <>
+      <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
+        <div className="text-center lg:text-start space-y-6">
+          <main className="text-5xl md:text-6xl font-bold">
+            <h1 className="inline">Contribute to SEA Data</h1>
+          </main>
 
-        <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          This catalog is the result of the{" "}
-          <a
-            target="_blank"
-            href="https://github.com/SEACrowd"
-            className="underline"
-          >
-            SEACrowd
-          </a>{" "}
-          initiative. Consider{" "}
-          <Link href="/contributors" className="underline">
-            citing us
-          </Link>{" "}
-          alongside the dataset you used for your scientific work.
-        </p>
+          <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
+            We are part of the{" "}
+            <a
+              target="_blank"
+              href="https://github.com/SEACrowd"
+              className="underline"
+            >
+              SEACrowd
+            </a>{" "}
+            initiative, {" "}
+            <Link href="/" className="underline">
+              Project SEALD
+            </Link>{" "} and <Link href="/" className="underline">
+              SEA-LION
+            </Link>{" "}.
+          </p>
 
-        <div className="space-y-4 md:space-y-0 md:space-x-4">
+          {/* <div className="space-y-4 md:space-y-0 md:space-x-4">
           <a href="#dataset">
             <Button className="w-full md:w-1/3">
               Browse Dataset <Database className="ml-2 w-5 h-5" />
@@ -139,14 +145,14 @@ export const Hero = () => {
             Catalogue Repository
             <Github className="ml-2 w-5 h-5" />
           </a>
+        </div> */}
         </div>
-      </div>
 
-      <div className="bg-yellow-50 rounded-3xl w-full relative mt-20 lg:mt-0">
-        <div className="h-[300px] w-full bg-yellow-50 rounded-3xl md:hidden"></div>
-        <div className="h-[400px] w-full overflow-hidden absolute left-0 top-0 md:relative -mt-[100px] pointer-events-none">
-          <div className="h-[450px] w-[450px] overflow-hidden absolute top-[40px] right-[40px] rounded-3xl">
-            <canvas
+        <div className="bg-blue-200 rounded-3xl w-full relative mt-20 lg:mt-0">
+          {/* <div className="h-[300px] w-full bg-yellow-50 rounded-3xl md:hidden"></div> */}
+          {/* <div className="h-[400px] w-full overflow-hidden absolute left-0 top-0 md:relative -mt-[100px] pointer-events-none"> */}
+          {/* <div className="h-[450px] w-[450px] overflow-hidden absolute top-[40px] right-[40px] rounded-3xl"> */}
+          {/* <canvas
               // @ts-ignore
               ref={canvasRef}
               style={{
@@ -155,15 +161,22 @@ export const Hero = () => {
                 maxWidth: "100%",
                 aspectRatio: 1,
               }}
-            />
-          </div>
-        </div>
-        <div className="absolute left-0 bottom-0 p-3 flex flex-row items-center">
+            /> */}
+          <RegionMap />
+          {/* </div> */}
+          {/* </div> */}
+          {/* <div className="absolute left-0 bottom-0 p-3 flex flex-row items-center">
           <Button variant="outline" onClick={randomCountry}>
             <MapPin size={20} className="mr-2" /> {country}
           </Button>
+        </div> */}
         </div>
+      </section>
+      <div className="container mx-auto min-h-screen">
+        <h1 className="text-4xl font-bold text-center my-8">Leaderboard</h1>
+        <GrandLeaderboard />
       </div>
-    </section>
+
+    </>
   );
 };

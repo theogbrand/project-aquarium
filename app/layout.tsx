@@ -3,12 +3,15 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Navbar } from "@/components/Navbar";
+import ChatBubbleWidget from "@/components/ChatBubbleWidget";
+import { Toaster } from "@/components/chatbot-widget/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SEACrowd Catalogue",
-  description: "SEACrowd Datasheet Catalogue & Indexing",
+  title: "Project Aquarium",
+  description: "Catalog of SEA data",
 };
 
 export default function RootLayout({
@@ -25,7 +28,12 @@ export default function RootLayout({
         ></meta>
       </Head>
       <TooltipProvider>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <Navbar />
+          {children}
+          <ChatBubbleWidget />
+          <Toaster />
+        </body>
       </TooltipProvider>
       <link
         rel="stylesheet"

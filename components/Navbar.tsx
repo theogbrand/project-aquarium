@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import {
   NavigationMenu,
@@ -17,6 +18,7 @@ import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import DropDown from "./ui/dropdown";
 
 interface RouteProps {
   href: string;
@@ -24,26 +26,26 @@ interface RouteProps {
 }
 
 const routeList: RouteProps[] = [
-  {
-    href: "https://arxiv.org/pdf/2406.10118",
-    label: "Publication",
-  },
-  {
-    href: "https://docs.google.com/spreadsheets/d/1ibbywsC1tQ_sLPX8bUAjC-vrTrUqZgZA46W_sxWw4Ss/edit?usp=sharing",
-    label: "Catalogue (CSV)",
-  },
-  {
-    href: "https://github.com/SEACrowd/seacrowd-datahub/",
-    label: "Data Hub",
-  },
-  {
-    href: "https://github.com/SEACrowd/seacrowd-experiments/",
-    label: "Experiments",
-  },
-  {
-    href: "/contributors",
-    label: "Contributors",
-  },
+  // {
+  //   href: "https://arxiv.org/pdf/2406.10118",
+  //   label: "Publication",
+  // },
+  // {
+  //   href: "https://docs.google.com/spreadsheets/d/1ibbywsC1tQ_sLPX8bUAjC-vrTrUqZgZA46W_sxWw4Ss/edit?usp=sharing",
+  //   label: "Catalogue (CSV)",
+  // },
+  // {
+  //   href: "https://github.com/SEACrowd/seacrowd-datahub/",
+  //   label: "Data Hub",
+  // },
+  // {
+  //   href: "https://github.com/SEACrowd/seacrowd-experiments/",
+  //   label: "Experiments",
+  // },
+  // {
+  //   href: "/contributors",
+  //   label: "Contributors",
+  // },
 ];
 
 export const Navbar = () => {
@@ -52,12 +54,13 @@ export const Navbar = () => {
   const renderLogo = () => {
     return (
       <Link href="/" className="ml-2 font-bold text-xl flex items-center">
-        <Image
-          src={"/seacrowd-catalogue/logo.png"}
+        <h1>Project Aquarium</h1>
+        {/* <Image
+          src={"/lib/logo.jpeg"}
           alt="logo"
           width={186}
           height={32}
-        />
+        /> */}
       </Link>
     );
   };
@@ -65,7 +68,7 @@ export const Navbar = () => {
   const renderMenu = () => {
     return (
       <>
-        {routeList.map((route: RouteProps, i) => (
+        {/* {routeList.map((route: RouteProps, i) => (
           <Link
             href={route.href}
             key={i}
@@ -75,15 +78,16 @@ export const Navbar = () => {
           >
             {route.label}
           </Link>
-        ))}
-        <a
+        ))} */}
+        {/* <a
           href="https://github.com/SEACrowd/"
           target="_blank"
           className={`border ${buttonVariants({ variant: "default" })}`}
         >
           <Github className="mr-2 w-5 h-5" />
           Github
-        </a>
+        </a> */}
+        <DropDown />
       </>
     );
   };
@@ -108,7 +112,7 @@ export const Navbar = () => {
                 </Menu>
               </SheetTrigger>
 
-              <SheetContent side={"left"}>
+              <SheetContent side={"right"}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl">
                     {renderLogo()}
