@@ -5,6 +5,7 @@ import Head from "next/head";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Navbar } from "@/components/Navbar";
 import ChatBubbleWidget from "@/components/ChatBubbleWidget";
+import { Toaster } from "@/components/chatbot-widget/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <ChatBubbleWidget />
+          <Toaster />
         </body>
       </TooltipProvider>
       <link
