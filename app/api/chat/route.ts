@@ -13,10 +13,18 @@ export async function POST(req: Request) {
 
   const { messages } = await req.json();
 
-  const result = await streamText({
-    model: openai("gpt-4o-2024-08-06"),
-    messages,
-  });
+  try {
+    const result = await streamText({
+      model: openai("gpt-4o-2024-08-06"),
+      messages,
+    });
 
-  return result.toDataStreamResponse();
+    return result.toDataStreamResponse();
+  } catch (error) {
+    console.error(error);
+    return new Response("Error in route.ts sending request to openai", { status: 500 });
+
+  }
 }
+
+export const dynamic = "force-static";
