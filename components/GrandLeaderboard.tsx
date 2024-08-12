@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 
+// TODO: replace with same LeaderboardData
 const locations = [
     {
         country: 'Philippines',
