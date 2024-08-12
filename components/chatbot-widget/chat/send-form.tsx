@@ -134,7 +134,8 @@ export default function SendForm({
         />
       </div>
 
-      <Button type="submit" className="h-10">
+      <Button type="submit" className="h-10 bg-black text-white bg-gray-800 text-white hover:bg-gray-700"
+      >
         {isLoading ? (
           <div className="flex gap-2 items-center">
             <Grid
