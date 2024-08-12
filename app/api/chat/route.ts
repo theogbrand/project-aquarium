@@ -28,4 +28,4 @@ export async function POST(req: Request) {
   }
 }
 
-export const dynamic = "force-static";
+// export const dynamic = "force-static";
