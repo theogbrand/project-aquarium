@@ -14,11 +14,12 @@ export async function POST(req: Request) {
   const { messages } = await req.json();
 
   try {
+    console.log("Sending request to openai");
     const result = await streamText({
       model: openai("gpt-4o-2024-08-06"),
       messages,
     });
-
+    console.log("recevied request to openai");
     return result.toDataStreamResponse();
   } catch (error) {
     console.error(error);
