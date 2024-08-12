@@ -3,6 +3,7 @@
 // import { MendableStream } from "@/lib/mendable_stream";
 import { systemMessage } from "@/lib/strings";
 import { openai } from '@ai-sdk/openai';
+import { anthropic } from '@ai-sdk/anthropic';
 import { streamText } from 'ai';
 
 // export const runtime = "edge";
@@ -16,7 +17,8 @@ export async function POST(req: Request) {
   try {
     console.log("Sending request to openai");
     const result = await streamText({
-      model: openai("gpt-4o-2024-08-06"),
+      // model: openai("gpt-4o-2024-08-06"),
+      model: anthropic('claude-3-5-sonnet-20240620'),
       messages,
       system: systemMessage,
     });
