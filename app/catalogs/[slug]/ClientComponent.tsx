@@ -5,6 +5,7 @@ import TreemapComponent from '@/components/Treemap'
 import "react-d3-treemap/dist/react.d3.treemap.css";
 import Leaderboard from "@/components/Leaderboard";
 import { BarChart } from "@/components/BarChart";
+import { leaderboardData } from "@/lib/LeaderboardData";
 
 const cityToCountry = {
     "singapore": "Singapore",
@@ -49,8 +50,11 @@ export default function ClientComponent({ slug }: { slug: string }) {
                 </div>
                 <div className="bg-gray-50">
                     <div className="w-full">
-                        {/* <img src="/seacrowd-catalogue/contributor.jpg" alt="contributor" /> */}
-                        <Leaderboard />
+                        {/* if slug is found in Leaderboard, THEN display Leaderboard with corresponding data */}
+                        {leaderboardData.find(item => item.country === slug) && (
+                            <Leaderboard data={leaderboardData.find(item => item.country === slug)?.contributor || []} />
+                        )}
+                        {/* <Leaderboard /> */}
                     </div>
                 </div>
             </section>
