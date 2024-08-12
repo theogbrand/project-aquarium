@@ -1,7 +1,7 @@
 // import { Configuration, OpenAIApi } from "openai-edge";
 // import { StreamingTextResponse } from "ai";
 // import { MendableStream } from "@/lib/mendable_stream";
-import { welcomeMessage } from "@/lib/strings";
+import { systemMessage } from "@/lib/strings";
 import { openai } from '@ai-sdk/openai';
 import { streamText } from 'ai';
 
@@ -18,6 +18,7 @@ export async function POST(req: Request) {
     const result = await streamText({
       model: openai("gpt-4o-2024-08-06"),
       messages,
+      system: systemMessage,
     });
     console.log("recevied request to openai");
     return result.toDataStreamResponse();
