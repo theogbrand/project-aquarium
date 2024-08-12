@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Navbar } from "@/components/Navbar"; // Add this import
-
+import { Navbar } from "@/components/Navbar";
+import ChatBubbleWidget from "@/components/ChatBubbleWidget";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,8 +28,9 @@ export default function RootLayout({
       </Head>
       <TooltipProvider>
         <body className={inter.className}>
-          <Navbar /> {/* Add the Navbar component here */}
+          <Navbar />
           {children}
+          <ChatBubbleWidget />
         </body>
       </TooltipProvider>
       <link
