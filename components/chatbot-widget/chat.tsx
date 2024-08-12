@@ -52,7 +52,7 @@ export default function Chat() {
     <Card className="w-[440px]">
       <CardHeader>
         <div className="flex flex-row items-start justify-between max-w-[100%]">
-          <CardTitle className="text-lg">Chatbot</CardTitle>
+          <CardTitle className="text-lg">Ask me a data question!</CardTitle>
           <Share
             onClick={() => {
               if (typeof window !== "undefined") {
@@ -75,7 +75,7 @@ export default function Chat() {
           />
         </div>
         <CardDescription className=" leading-3">
-          Powered by Mendable and Vercel
+          Powered by AI Singapore
         </CardDescription>
       </CardHeader>
       <CardContent className="">
