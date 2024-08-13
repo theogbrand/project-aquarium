@@ -121,9 +121,9 @@ export const Hero = () => {
               SEACrowd
             </a>{" "}
             initiative, {" "}
-            <Link href="/" className="underline">
+            <Link href="https://aisingapore.org/aiproducts/southeast-asian-languages-in-one-network-data-seald/" className="underline">
               Project SEALD
-            </Link>{" "} and <Link href="/" className="underline">
+            </Link>{" "} and <Link href="https://huggingface.co/aisingapore/llama3-8b-cpt-sea-lionv2-instruct" className="underline">
               SEA-LION
             </Link>{" "}.
           </p>
